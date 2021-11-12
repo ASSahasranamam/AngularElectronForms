@@ -17,7 +17,7 @@ export class UserDisplayComponent implements OnInit {
   }
   public  async getAllEntities() {
     // console.log(this.firstName,this.lastName,this.gender,this.email,this.address,this.number);
-    await this.http.post(`http://localhost:3000/getAll`, {}).subscribe( (response: any) => {
+    await this.http.post(`https://adi.adicyber.com/ElectronForms/getAll`, {}).subscribe( (response: any) => {
       // debugger;
       let arr =  [];
 

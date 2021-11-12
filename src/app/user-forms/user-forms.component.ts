@@ -28,10 +28,10 @@ export class UserFormsComponent implements OnInit {
   
   public addEntry() {
     console.log(this.firstName,this.lastName,this.gender,this.email,this.address,this.number);
-    this.http.post(`http://localhost:3000/addtest`, {"firstName": this.firstName, "lastName": this.lastName,"address": this.address, "number": this.number, "email":this.email, "gender": this.gender}).subscribe( (data: any) => {
+    this.http.post(`https://adi.adicyber.com/ElectronForms/addtest`, {"firstName": this.firstName, "lastName": this.lastName,"address": this.address, "number": this.number, "email":this.email, "gender": this.gender}).subscribe( (data: any) => {
       // debugger;
       let arr =  [];
-
+      alert("ContactAdded")
       console.log("DATA-RUNNINGNUMBER :  ", data.hello);
 
 

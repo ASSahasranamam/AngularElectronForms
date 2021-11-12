@@ -6,14 +6,16 @@ const {app, BrowserWindow} = require('electron')
 
     function createWindow () {
       mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        show:false,
         webPreferences: {
           nodeIntegration: true,
           webSecurity: false,
           devTools: false
         }
       })
+      
+      mainWindow.maximize();
+      mainWindow.show();
 
       mainWindow.loadURL(
         url.format({
